@@ -11,6 +11,7 @@ set smarttab
 " Don't expand tab for Makefiles
 autocmd FileType make set noexpandtab
 
+
 " Auto indent and smart indent
 set ai
 set si
@@ -39,6 +40,9 @@ set lazyredraw
 
 " https://thevaluable.dev/vim-php-ide/
 call plug#begin('~/.vim/plugged')
+Plug 'SirVer/ultisnips'
+Plug 'honza/vim-snippets'
+Plug 'nelsyeung/twig.vim'
 Plug 'ludovicchabant/vim-gutentags'
 Plug 'StanAngeloff/php.vim'
 Plug 'stephpy/vim-php-cs-fixer'
@@ -56,4 +60,10 @@ Plug 'tobyS/vmustache'
 Plug 'tobyS/pdv'
 Plug 'Glench/Vim-Jinja2-Syntax'
 Plug 'othree/html5.vim'
+
+Plug 'mattn/emmet-vim'
 call plug#end()
+
+let g:user_emmet_leader_key='<Tab>'
+let g:user_emmet_install_global = 0
+autocmd FileType html,css,jinja EmmetInstall
