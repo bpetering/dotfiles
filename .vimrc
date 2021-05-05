@@ -38,6 +38,15 @@ set cmdheight=2
 " Only redraw screen when needed
 set lazyredraw
 
+" don't prompt save 
+set hidden
+
+" folding
+set foldmethod=indent
+
+" expand when opening
+set foldlevelstart=99
+
 " https://thevaluable.dev/vim-php-ide/
 call plug#begin('~/.vim/plugged')
 Plug 'SirVer/ultisnips'
@@ -67,3 +76,6 @@ call plug#end()
 let g:user_emmet_leader_key='<Tab>'
 let g:user_emmet_install_global = 0
 autocmd FileType html,css,jinja EmmetInstall
+
+nmap <F8> :TagbarToggle<CR>
+
